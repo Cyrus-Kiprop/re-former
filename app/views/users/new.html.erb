@@ -1,0 +1,18 @@
+<h1>New User</h1>
+<form action="/users" method="post" accept-charset="utf-8">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+  <label for="username">Username:</label>
+  <input type="text" value="@johndoe" name="user[username]" id=""/>
+
+  <label for="Email:">Email:</label>
+  <input type="text" name="user[email]" id="email" value="example@gmail.com" />
+
+  <label for="password">Password:</label>
+  <input type="password" name="user[password]" id="password" value="password" />
+
+  <label for="confirm_password">Confirm Password:</label>
+  <input type="password" name="confirm_password" id="confirm_password" value="password" />
+
+  <input type="submit" value="Submit" />
+</form>
