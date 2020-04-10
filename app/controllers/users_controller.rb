@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  def new; end
+  def new
+    @user = User.new(username: 'Cyrus Kiprop', email: 'cyruskiprop@gmail.com', password: 'dfdslfds34')
+  end
+
   def create
+    # @user = User.new(email: params[:email], username:params[:username], password: params[:password])
+
     @user = User.new(user_params)
 
     if @user.save
@@ -10,11 +15,18 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update
+  end
 
   private
+
   def user_params
     params.require(:user).permit(:email, :username, :password)
   end
-
 end

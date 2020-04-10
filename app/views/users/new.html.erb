@@ -1,18 +1,40 @@
-<h1>New User</h1>
-<form action="/users" method="post" accept-charset="utf-8">
-  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+<%# <h1>New User</h1> %>
+<%# <form action="/users" method="post" accept-charset="utf-8"> %>
+  <%# <input type="hidden" value="<%= form_authenticity_token %>
+  <%#  name="authenticity_token" /> %>
 
-  <label for="username">Username:</label>
-  <input type="text" value="@johndoe" name="user[username]" id=""/>
 
-  <label for="Email:">Email:</label>
-  <input type="text" name="user[email]" id="email" value="example@gmail.com" />
+  <%# <label for="username">Username:</label> %>
+  <%# <input type="text" value="@johndoe" name="user[username]" id=""/> %>
 
-  <label for="password">Password:</label>
-  <input type="password" name="user[password]" id="password" value="password" />
+  <%# <label for="Email:">Email:</label> %>
+  <%# <input type="text" name="user[email]" id="email" value="example@gmail.com" /> %>
 
-  <label for="confirm_password">Confirm Password:</label>
-  <input type="password" name="confirm_password" id="confirm_password" value="password" />
+  <%# <label for="password">Password:</label> %>
+  <%# <input type="password" name="user[password]" id="password" value="password" /> %>
 
-  <input type="submit" value="Submit" />
-</form>
+  <%# <label for="confirm_password">Confirm Password:</label> %>
+  <%# <input type="password" name="confirm_password" id="confirm_password" value="password" /> %>
+
+  <%# <input type="submit" value="Submit" /> %>
+<%# </form> %>
+
+<%# <%= form_tag(users_path, method: 'post') do %>
+  <%# <%= label_tag 'username', 'Username:'%>
+  <%# <%= text_field_tag 'username', '@johndoe' %>
+  <%# <%= label_tag 'email', 'Email:'%>
+  <%# <%= text_field_tag 'email', 'johndoe@gmail.com' %>
+  <%# <%= label_tag 'password', 'Password:'%>
+  <%# <%= text_field_tag 'password', 'password' %>
+  <%# <%= submit_tag 'Create User'%>
+<%# <% end %>
+
+
+<%# Railsy-er Forms with #form_for %>
+
+<%= form_for @user do |f| %>
+  Username: <%= f.text_field :username, :value => 'johndoe'%>
+  Email: <%= f.text_field :email, :value => 'example@gmail.com' %>
+Password: <%= f.text_field :password , :type => 'password'%>
+<%= f.submit :value => 'Create User' %>
+<% end %>
