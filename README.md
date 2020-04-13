@@ -11,7 +11,7 @@
 
 ## Description of the project
 
-Buiding form in rails using helper methods (form_tags && form_for)
+The project involves creation of forms in rails using different three different techniques. Here in, the forms created with form_tags methods and normal html tags are commented out while the one that is uncommented is the form created with form_for  railsey tags.
 
 **The project contain database models and schemas that model the user object
 visit [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms) for the full project specifications.
