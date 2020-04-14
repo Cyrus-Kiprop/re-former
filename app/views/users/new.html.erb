@@ -1,0 +1,38 @@
+<%# <h1>New User</h1> %>
+<%# <form action="/users" method="post" accept-charset="utf-8"> %>
+  <%# <input type="hidden" value="<%= form_authenticity_token %>
+  <%#  name="authenticity_token" /> %>
+
+
+  <%# <label for="username">Username:</label> %>
+  <%# <input type="text" value="@johndoe" name="user[username]" id=""/> %>
+
+  <%# <label for="Email:">Email:</label> %>
+  <%# <input type="text" name="user[email]" id="email" value="example@gmail.com" /> %>
+
+  <%# <label for="password">Password:</label> %>
+  <%# <input type="password" name="user[password]" id="password" value="password" /> %>
+
+  <%# <label for="confirm_password">Confirm Password:</label> %>
+  <%# <input type="password" name="confirm_password" id="confirm_password" value="password" /> %>
+
+  <%# <input type="submit" value="Submit" /> %>
+<%# </form> %>
+
+<%# <%= form_tag(users_path, method: 'post') do %>
+  <%# <%= label_tag 'username', 'Username:'%>
+  <%# <%= text_field_tag 'username', '@johndoe' %>
+  <%# <%= label_tag 'email', 'Email:'%>
+  <%# <%= text_field_tag 'email', 'johndoe@gmail.com' %>
+  <%# <%= label_tag 'password', 'Password:'%>
+  <%# <%= text_field_tag 'password', 'password' %>
+  <%# <%= submit_tag 'Create User'%>
+<%# <% end %>
+
+
+<%# Railsy-er Forms with #form_for %>
+<div class="container">
+  <h1>User Registration</h1>
+  <h4>New to this site? Please register</h4>
+  <%= render "forms", submit_string: "Create User" %>
+</div>

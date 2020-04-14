@@ -1,0 +1,26 @@
+@import "../base/mixins.scss";
+.index-container {
+  @include container;
+
+
+  .list-users {
+    width: 100%;
+    padding: 10px 0;
+
+    li {
+      width: 100%;
+      height:auto;
+      display: flex;
+      list-style-type: none;
+      margin: 5px 0;
+
+      .checkmark-logo {
+        height: 16px;
+        display:inline-block;
+        width: 16px;
+        border: 1px solid red;
+        margin-right: 4px;
+      }
+    }
+  }
+}
