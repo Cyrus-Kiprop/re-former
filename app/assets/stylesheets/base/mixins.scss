@@ -1,0 +1,24 @@
+@mixin input {
+  width:100%;
+  outline: none;
+  border:2px solid #CCC;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+}
+
+@mixin input_hover {
+  transition:border-color 0.3s ease-in-out;
+  border:2px solid #F96;
+}
+
+@mixin container {
+  font-family:"Open Sans", Helvetica, Arial, sans-serif;
+  max-width:400px;
+  width:100%;
+  margin:0 auto;
+  position:relative;
+  color:#777;
+  box-shadow: 7px 5px 10px 1px rgba(0, 0, 255, .2);
+  padding: 0 10px;
+}
