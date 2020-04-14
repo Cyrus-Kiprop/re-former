@@ -31,10 +31,8 @@
 
 
 <%# Railsy-er Forms with #form_for %>
-
-<%= form_for @user do |f| %>
-  Username: <%= f.text_field :username, :value => 'johndoe'%>
-  Email: <%= f.text_field :email, :value => 'example@gmail.com' %>
-Password: <%= f.text_field :password , :type => 'password'%>
-<%= f.submit :value => 'Create User' %>
-<% end %>
+<div class="container">
+  <h1>User Registration</h1>
+  <h4>New to this site? Please register</h4>
+  <%= render "forms", submit_string: "Create User" %>
+</div>
