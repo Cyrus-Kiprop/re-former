@@ -1,0 +1,64 @@
+@import "../base/mixins.scss";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+.container {
+@include container;
+
+  h1 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
+  }
+
+
+  .form_container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+
+    input[type="text"] {
+      @include input;
+      &:hover {
+        @include input_hover
+      }
+    }
+
+    input[type="email"] {
+      @include input;
+      &:hover {
+        @include input_hover
+      }
+    }
+
+    input[type="password"] {
+      @include input;
+      &:hover {
+        @include input_hover
+      }
+    }
+
+    input[type="submit"] {
+      cursor:pointer;
+      width:100%;
+      border:none;
+      background:#0CF;
+      color:#FFF;
+      margin:0 0 5px;
+      padding:10px;
+      font-size:15px;
+
+      &:hover {
+        background:#09C;
+        transition:background-color 0.3s ease-in-out;
+      }
+    }
+  }
+
+}

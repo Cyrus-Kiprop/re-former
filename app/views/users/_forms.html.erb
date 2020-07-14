@@ -1,0 +1,13 @@
+<%= form_for @user, html: {class: 'form_container'} do |f| %>
+  <% if @user.errors.any? %>
+    <h2>Errors</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%=message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  Username: <%= f.text_field :username, :placeholder => ''%>
+  Email: <%= f.email_field :email, :placeholder => '' %>
+  <%= f.submit :value => submit_string %>
+<% end %>
